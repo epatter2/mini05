@@ -1,0 +1,16 @@
+<strong>
+<form action="/question" method="POST">
+  <p> <%= question.problem %> </p>
+  <hr>
+  <input type="radio" name="choice" value="0"/>
+  <%= question.choices[0] %><br/>
+  <input type="radio" name="choice" value="1"/>
+  <%= question.choices[1] %><br/>
+  <input type="radio" name="choice" value="2"/>
+  <%= question.choices[2] %><br/>
+  <input type="radio" name="choice" value="3"/>
+  <%= question.choices[3] %><br/>
+  <hr>
+  <input type="submit" value="Enter"/>
+</form>
+</strong>

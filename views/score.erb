@@ -1,0 +1,35 @@
+<center>
+<strong>
+<p style="font-size: 30px">Your score is <%= score %> </p>
+
+<% if score.to_i == 6 %>
+<p style="font-size: 18px">
+  You got 100%! 
+  <hr></br>
+  Congradulations! I guess perfection is attainable
+</p>
+  <hr></br>
+<img src="/baby.jpg"/>
+<% elsif score.to_i == 3 %>
+<p>
+  You got a 50%...
+  <hr></br>
+  "I don't know <em>half</em> of you <em>half</em> as well as I should like;<br>
+  and I like less than <em>half</em> of you <em>half</em> as well as you deserve."<br> 
+  -Bilbo Baggins
+</p>
+  <hr></br>
+<img src="/mediocre.jpg"/>
+<% elsif score.to_i <= 2%>
+  <hr></br>
+<p style="font-size: 18px">
+    Your score is too embarrassing to display, so you might wanna give it another
+    try &#x1f609;
+</p>
+  <hr></br>
+<img src="/aliens.png"/>
+<% end %>
+
+<p><a href="/startover" style="text-decoration:none; font-size: 25px">Take the quiz again?</a></p>
+</strong>
+</center>
