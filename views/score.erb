@@ -1,7 +1,10 @@
 <center>
 <strong>
-<p style="font-size: 30px">Your score is <%= score %> </p>
-
+  <% if score.to_i == 0 %>
+    <p style="font-size: 30px">You got 0 out of 6 right  </p>
+  <% else %>
+    <p style="font-size: 30px">You got <%= score %> out of 6 right </p>
+  <% end %>
 <% if score.to_i == 6 %>
 <p style="font-size: 18px">
   You got 100%! 
@@ -23,8 +26,7 @@
 <% elsif score.to_i <= 2%>
   <hr></br>
 <p style="font-size: 18px">
-    Your score is too embarrassing to display, so you might wanna give it another
-    try &#x1f609;
+    Well that's embarrassing, you might wanna give it another try &#x1f609;
 </p>
   <hr></br>
 <img src="/aliens.png"/>
